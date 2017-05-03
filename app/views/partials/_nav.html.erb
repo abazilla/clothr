@@ -1,0 +1,29 @@
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        <%= link_to image_tag("http://bulma.io/images/bulma-logo.png"), root_path, class: "nav-item is-brand"%>
+      </a>
+<%= link_to('Items', items_path, class: "nav-item istab is-hidden-mobile") %>
+    </div>
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+<%= link_to('Items', items_path, class: "nav-item istab is-hidden-tablet") %>
+      <a class="nav-item is-tab">
+        <figure class="image is-16x16" style="margin-right: 8px;">
+          <img src="http://bulma.io/images/jgthms.png">
+        </figure>
+        Profile
+      </a>
+      <% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "nav-item is-tab") %>
+<% else %>
+  <%= link_to('Login', new_user_session_path, class: "nav-item is-tab")  %>
+<% end %>
+    </div>
+  </div>
+</nav>
