@@ -37,6 +37,8 @@ gem "pundit"
 gem 'devise'
 gem "bulma-rails", "~> 0.4.0"
 gem "administrate"
+gem 'carrierwave', '~> 1.0'
+
 
 
 # Use Capistrano for deployment

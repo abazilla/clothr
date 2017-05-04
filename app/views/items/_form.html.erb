@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <div class="label">
+    <%= f.label :images %>
+    <%= f.file_field :images, class: 'input', multiple: true %>
+  </div>
+
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -29,11 +34,6 @@
   <div class="field">
     <%= f.label :size %>
     <%= f.text_field :size %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
   </div>
 
   <div class="actions">
